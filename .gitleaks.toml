@@ -1,0 +1,19 @@
+title = "rhoai-usecases gitleaks config"
+
+[allowlist]
+  description = "Allow known placeholder values"
+  regexTarget = "match"
+  regexes = [
+    '''CHANGE_ME''',
+    '''fake''',
+    '''placeholder''',
+    '''example\.com''',
+  ]
+  paths = [
+    '''.gitleaks\.toml''',
+    '''.secrets\.baseline''',
+    '''.pre-commit-config\.yaml''',
+    '''docs/''',
+    '''\.md$''',
+    '''LICENSE''',
+  ]
